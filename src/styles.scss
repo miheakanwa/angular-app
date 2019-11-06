@@ -1,0 +1,431 @@
+// // @mixin
+// // @include
+// // @function
+
+// $gutter-vertical: 2rem;
+// $gutter-horizontal: 4rem;
+// .field-error {
+//     border: 1px solid red !important;
+// }
+// @mixin clearfix {
+//     &::after {
+// content: "";
+// display: table;
+// clear: both;
+//     }
+// }
+// /* You can add global styles to this file, and also import other style files */
+// $border-radius:20px;
+// $base-font-size: 2px;
+// .activity-detail{
+//     padding-top:2rem;
+//     padding-bottom:2rem;
+    
+// }
+
+// /**********Form Layout (main Tab, Left Menu & Center Content) Start************/
+// .detail-container{
+//     padding: 2%;
+//     padding-top:0;
+//     /* min-height:1000px; */
+//     overflow: unset;
+//     margin-top:0.5rem;
+// }
+// .template-fields-container{
+//     margin-top:3rem;
+// }
+// .left-menu-container{
+//     float: left;
+//     width: 15%;
+//     margin-top: 4rem;
+// }
+// .left-menu-absolute{
+//     position:absolute;
+//     width:14%;
+// }
+// /* This width is closely interpretted to the 15% width of the left-menu-container. 
+// Since the fixed position takes the relative width of the document window itself this is approximated to the detail container width */
+// .left-menu-fixed {
+//     position: fixed;
+//     width: 14%; 
+//     top: 3rem;
+// }
+
+// .center-content-withleftmenu{
+//     float: left;
+//     width: 83%;
+//     margin-left: 2%;
+// }
+// .comp-toggle-img {
+//     margin-left: 1rem;
+// }
+
+// .actions-container{
+//     height:4rem;
+//     margin:0;
+//     display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     justify-content: space-between;
+//     padding-top: 0.5rem;
+//     h3 {
+//         flex: 8;
+//         padding: 0;
+//         margin: 0;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         margin-right: 1rem;
+//     }
+//     .actions-status {
+//         flex:2; 
+//         text-align: right;
+//         padding-top: .5rem;
+//     }
+//     .actions-options {
+//         /* flex: 1;  */
+//         text-align: right;
+//         position:relative;
+//         .actions-dropdown { 
+//             /* position properties and width as per needed for the actions container */
+//             text-align: left;
+//             top: 2.5rem;
+//             right: -2.8rem;
+//             width: 7rem;
+//         }
+        
+//     }
+//     .button-act-cancel{
+//         background-size:2.5rem 2.5rem;
+//         margin-top:0.5rem;
+//     }
+// }
+
+// .left-nav-current{
+//     border-left:0.4rem solid #0071bc;
+//     border-radius:$border-radius;
+//     font-weight: 700 !important;
+//     padding-left:0rem !important;
+//     margin-left:-0.1rem;
+// }
+
+// .left-nav-list {
+//     border-left: 0.1rem solid #c2c2c2;
+//     border-right: 0.1rem solid #c2c2c2;
+//     border-bottom: 0.1rem solid #c2c2c2;
+//     border-top: 0.1rem solid #c2c2c2;
+//     border-radius:$border-radius;
+//     box-shadow: 0 2px 10px rgba(0,0,0,.2);
+//     & li{
+//         padding-left:0.4rem;
+//         border-top: none;
+//         font-size:$base-font-size;
+//     }
+//     & a{
+//         line-height:1.0;
+//         outline:none;
+//         word-break: break-word;
+//         &.usa-current{
+//             color:#212121;    
+//             border-radius:0.3rem;
+//         }
+//     }
+// }
+
+
+// .left-nav-sublist{
+//     border:0px;
+//     line-height:1;
+//     border-top:none;
+//     margin-left:2rem !important;
+//     & li{
+//         font-size:$base-font-size;
+//         font-weight:400;
+//     }
+//     & a{
+//         line-height: 1.3;
+//         outline:none;
+//     }
+// }
+
+// .left-nav-current-submenu ::before{
+//     content:">";
+//     //padding:0.2rem;
+// }
+
+// .left-nav-current-submenu {
+//     font-weight: 700 !important;
+// }
+
+
+// /**********Form Layout End************/
+
+// /*********Detail Form****************/
+
+// .detail-form-section{
+//     padding:0rem 1rem 1rem 1rem;
+
+//     label{
+//         margin-bottom: -0.25rem;
+//      }
+//     & .usa-grid-full{
+//         margin-bottom: 1rem;
+//      //   margin-top: -1rem;
+//     }
+//     @mixin calculateinputspan($width_prop){
+//         width : $width_prop * 10%;
+//     }
+
+//     & .span1{
+//         @include calculateinputspan(1);
+//     }
+//     & .span2{
+//         @include calculateinputspan(2);
+//     }
+//     & .span3{
+//         @include calculateinputspan(3);
+//     }
+//     & .span4{
+//         @include calculateinputspan(4);
+//     }
+//     & .span5{
+//         @include calculateinputspan(5);
+//     }
+//     & .span6{
+//         @include calculateinputspan(6);
+//     }
+//     & .span7{
+//         @include calculateinputspan(7);
+//     }
+//     & .span8{
+//         @include calculateinputspan(8);
+//     }
+//     & .span9{
+//         @include calculateinputspan(9);
+//     }
+//     & .span10{
+//         @include calculateinputspan(10);
+//     }
+
+//     & .form-section{
+//         // margin-top:4rem;
+//     }
+//     & .button-act-actions{
+//         float:none;
+//     }
+//     & .actions-dropdown{
+//         margin-top: -1rem;
+//         margin-left: 1rem;
+
+//         & .actions-list{
+//             width: 9rem;
+//         }
+
+//     }
+//     .alert-danger{
+//         margin-top:1rem;
+//     }
+//     .inline-form{
+//         padding-top:2rem;
+//         padding-bottom:2rem;
+//         border:0.1rem solid #999;
+//         padding:1.5rem;
+//     }
+
+//     .sort-utils { //Pagination and Sort Utils for Tables
+//         div {
+//             display: inline-block;
+//             vertical-align: middle;
+//             line-height: 3rem;
+//         }
+//         .sortLabel {
+//             margin: 0 1rem;
+//         }
+//         .sortOptions {
+//             margin: 0;
+//             padding: 0;
+//             & select{
+//                 width: auto;
+//                 padding-right: 3rem;
+//             }
+//         }
+//         .sortImage {
+//             margin: 0;
+//             padding: 0;
+//             margin-left: -3px;
+//             .image-sorting{
+//                 float: right;
+//                 border-top: 1px solid #737373;
+//                 border-right: 1px solid #737373;
+//                 border-bottom: 1px solid #737373;
+//                // border-left: 1px solid #737373;
+//                 border-top-right-radius: 2px;
+//                 border-bottom-right-radius: 2px;
+//                 height: 3rem;
+//                 padding: 6px;
+//                 margin-right: 0;
+//                 background-color:#fff;
+//             }
+//         }
+//         .sortPagination {
+//             margin: 0 1rem;
+//             padding: 0;
+//             width:20%;
+//             span:nth-of-type(3) {
+//                 padding-right: .5rem;
+//             }
+//         }
+//         .sortOther {
+//             margin: 0 1rem;
+//             padding: 0;
+//             .comp-export {
+//                 width: 25px;
+//                 margin-top:0;
+//                 img {
+//                     height:20px;
+//                     width: 25px;
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// /* timetracking */
+// .tt-container{
+
+//     padding:0 2% 0 2%;
+
+//     & .detail-container{
+//         padding:2% 0 2% 0 !important;
+
+//         & .left-menu-container{
+//             margin-top:0.1rem !important;
+//         }
+//         & .center-content-withleftmenu{
+//             margin-top:0.1rem !important;
+//         }
+//         & .button-act-actions{
+//             float:none;
+//         }
+//         & .button-act-edit{
+//             float:none;
+//         }
+    
+        
+//     }
+// }
+
+
+// $color-secondary: #f08a5d;
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+// nav {
+// 	margin:30px;
+// 	background-color: red;
+	
+// 	&::after {
+// 	content:"";
+// 	clear: both;
+// 	display: table;
+// }
+// }
+
+
+
+// .navigation {
+// 	list-style: none;
+// 	float: left;
+// 	padding: 10px;
+	
+// 	li {
+// 		display: inline-block;
+// 		margin-left: 30px;
+		
+// 		&:first-child {
+// 			margin: 0px;
+// 		}
+// 		a {
+// 			text-decoration: none;
+// 			text-transform: uppercase;
+// 			color: white;
+// 		}
+// 	}
+// }
+
+// .buttons {
+// 	float: right;
+// }
+
+
+// .btn-main:link,
+// .btn-hot:link{
+// 	padding: 10px;
+// 	display: inline-block;
+// 	text-align: center; 
+// 	border-radius: 100px;
+// 	text-decoration: none;
+// 	text-transform: uppercase;
+// 	width:150px;
+// 	color: white;
+	
+// }
+
+// .btn-main {
+// 	&:link {
+// 		background-color: $color-secondary;
+// 	}
+// 	&:hover {
+// 		background-color: darken($color-secondary, 15%);
+// 	}
+// }
+// .btn-hot {
+// 	&:link {
+// 		background-color: $color-secondary;
+// 	}
+// 	&:hover {
+// 		background-color: darken($color-secondary, 15%);
+// 	}
+// }
+
+// .row {
+//     background-color: orangered;
+//     max-width: 114rem;
+//     margin: 2rem 2rem;
+   
+
+//     &:not(:last-child) {
+//         margin-bottom: $gutter-vertical;
+//     }
+
+//     @include clearfix;
+
+//     [class^="col-"] {
+//         background-color: green;
+//         float: left;
+
+//          &:not(:last-child) {
+//             margin-right: $gutter-horizontal;
+//          }
+//     }
+
+//     .col-1-of-2 {
+//         width: calc((100% - #{$gutter-horizontal})/2);
+
+//     }
+//     .col-1-of-3 {
+//         width: calc((100% - 2*#{$gutter-horizontal})/3);
+
+//     }
+//     .col-2-of-3 {
+//         width: calc(2*((100% - 2*(#{$gutter-horizontal}))/3) + #{$gutter-horizontal});
+
+//     }
+//     .col-1-of-4 {
+//         width: calc((100% - 3*#{$gutter-horizontal})/4);
+
+//     }
+// }

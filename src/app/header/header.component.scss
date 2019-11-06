@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$nav-background-color: cadetblue;
+.navigation {
+    background-color: $nav-background-color;
+    //margin: 30px;
+    height: 60px;
+
+    li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px 0px;
+        margin-left: 10px;
+    }
+    li:firstChild {
+        margin-left: 50px;
+    }
+   
+}
+.buttons {
+ float: right;       
+}
+.btn-primary, .btn-secondary {
+margin: 10px;
+border-radius: 72px;
+padding: 5px 5px;
+cursor: pointer;
+}

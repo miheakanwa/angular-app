@@ -1,0 +1,294 @@
+<!-- <nav class="clearfix">
+	<div class="navigation">
+		<li>
+			<a href="#">About us</a>
+		</li>
+		<li>
+			<a href="#">Home</a>
+		</li>
+		<li>
+			<a href="#">Game</a>
+		</li>
+	</div>
+
+	<div class="buttons">
+		<a class="btn-main" href="#">Sign up</a>
+		<a class="btn-hot" href="#">Log in</a>
+	</div>
+</nav>
+
+<div class="row">
+
+	<div class="col-1-of-2">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-2">
+		col-1-of-2
+	</div>
+ <div class="col-1-of-2">
+		col-1-of-2
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-1-of-3">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-3">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-3">
+		col-1-of-2
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-1-of-3">
+		col-1-of-3
+	</div>
+	<div class="col-2-of-3">
+		col-2-of-3
+	</div>
+
+</div>
+<div class="row">
+
+	<div class="col-1-of-4">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-4">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-4">
+		col-1-of-2
+	</div>
+	<div class="col-1-of-4">
+		col-1-of-2
+	</div>
+</div>
+
+<div class="row">
+
+	<div class="col-1-of-2">
+		Search Results
+	</div>
+	<div class="col-1-of-2">
+		<select (change)="sortResultsBy(sortValue)" ([ngModel])="sortValue" name="sortValue">
+			<option value="name">Name</option>
+			<option value="id">Id</option>
+			<option value="age">Age</option>
+		</select>
+	</div>
+
+</div>
+<div class="container">
+	<div class="row" *ngFor="let item of items">
+		<div class="span4">
+			<label>
+				<strong>Name</strong>
+			</label>
+			<div>
+				{{item.employee_name}}
+			</div>
+		</div>
+		<div class="span4">
+			<label>
+				<strong>Salary</strong>
+			</label>
+			<div>
+				{{item.employee_salary}}
+			</div>
+		</div>
+		<div class="span2">
+			<label>
+				<strong>Age</strong>
+			</label>
+			<div>
+				{{item.employee_age}}
+			</div>
+		</div>
+		<div class="span2">
+			<label>
+				<strong>Name</strong>
+			</label>
+			<div>
+				{{item.id}}
+			</div>
+		</div>
+			date:'fullDate'
+		<div class="span2">
+			<label>
+				<strong>Date</strong>
+			</label>
+			<div>
+				{{item.date | date:'fullDate'}}
+			</div>
+		</div>
+		<div class="span2">
+			<label>
+				<strong>Date</strong>
+			</label>
+			<div>
+				{{item.date | date:'mediumDate'}}
+			</div>
+		</div>
+		<div class="span2">
+			<label>
+				<strong>Date</strong>
+			</label>
+			<div>
+				{{item.date | date:'fullDate'}}
+			</div>
+		</div>
+
+	</div>
+</div> -->
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+	<input formControlName="name" placeholder="Your name">
+	<input formControlName="email" placeholder="Your email">
+	<input formControlName="message" placeholder="Your message">
+
+	<button type="submit">Send</button>
+  </form>
+<label>F Name</label>
+  <input type="text" id="fName">
+
+  <label>L Name</label>
+  <input type="text" id="lName">
+
+  <button type="submit">Submit</button>-->
+<!-- <b>Bold text</b>
+
+
+
+<form>
+
+
+<label>First Name</label>
+  <input type="text">
+<br>
+<label>Last Name</label>
+  <input type="number">
+  <br>
+  <input type="password">
+  <br>
+  <button type="button" >Submit</button>
+
+</form> -->
+
+<!-- <img src="favicon.ico" alt="Girl in a jacket" style="width: 50%"> -->
+
+
+
+  <!-- <p style="background-color: aquamarine">
+	   inline Style
+  Angular
+  </p>
+
+  <h1>Angular</h1>
+  <h2 class="secondaryHeader1">Angular</h2>
+  <h3>Angular</h3>
+  <h4 class="secondaryHeader1">Angular</h4>
+  <h5 id="idTest">Angular</h5>
+  <h5 class="secondaryHeader1">Angular</h5>
+
+
+
+  <table class="secondaryHeader1">
+		<tr>
+		  <th>Company</th>
+		  <th>Contact</th>
+		  <th>Country</th>
+		</tr>
+		<tr>
+		  <td>Alfreds Futterkiste</td>
+		  <td>Maria Anders</td>
+		  <td>Germany</td>
+		</tr>
+		<tr>
+		  <td>Centro comercial Moctezuma</td>
+		  <td>Francisco Chang</td>
+		  <td>Mexico</td>
+		</tr>
+		<tr>
+		  <td>Ernst Handel</td>
+		  <td>Roland Mendel</td>
+		  <td>Austria</td>
+		</tr>
+		<tr>
+		  <td>Island Trading</td>
+		  <td>Helen Bennett</td>
+		  <td>UK</td>
+		</tr>
+		<tr>
+		  <td>Laughing Bacchus Winecellars</td>
+		  <td>Yoshi Tannamuri</td>
+		  <td>Canada</td>
+		</tr>
+		<tr>
+		  <td>Magazzini Alimentari Riuniti</td>
+		  <td>Giovanni Rovelli</td>
+		  <td>Italy</td>
+		</tr>
+	  </table> -->
+
+
+{{student.id}} <br>
+{{student.firstName}} <br>
+{{student.email}}
+
+
+<br>
+
+{{studentsList[0].id}}<br>
+{{studentsList[0].firstName}}<br>
+{{studentsList[0].lastName}}<br>
+<p>2nd Stusenr</p>
+
+
+{{studentsList[1].id}}<br>
+{{studentsList[1].firstName}}<br>
+{{studentsList[1].lastName}}<br>
+
+
+<table>
+	<tr >
+		<th>Id</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Marks</th>
+		<th>Grade</th>
+	</tr>
+	<tr *ngFor="let item of studentsList">
+		<td>{{item.id}}</td>
+		<td>{{item.firstName}}</td>
+		<td>{{item.lastName}}</td>
+		<td>{{item.email}}</td>
+		<td>{{item.marks}}</td>
+		<td *ngIf="item.marks >= 40">pass</td>
+		<td *ngIf="item.marks<40">fail</td>
+	</tr>
+
+</table>
+
+
+
+<input class="form-control" placeholder="yyyy-mm-dd"
+             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+	  </div>
+
+	  <input class="form-control" 
+	  		 placeholder="yyyy-mm-dd"
+			 name="endDate" 
+			 [(ngModel)]="endDate" 
+			 ngbDatepicker 
+			 #e="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button"></button>
+	  </div>
+
+    <button type="button" (click)="checkdate()" name="button">Date Check</button>

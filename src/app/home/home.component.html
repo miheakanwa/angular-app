@@ -1,0 +1,68 @@
+
+<form [formGroup]="sampleForm" (submit)="submitForm()">
+<div class="full-width">
+<div class="one-half">
+
+
+
+ <div class="span10">
+  <ng-template #rtState let-r="result" let-t="term">{{ r.name}}</ng-template>
+  <label for="stateCode">State*</label>
+  <input id="stateCode" 
+                         placeholder="Search..." 
+                         aria-label="Enter State" 
+                         type="text" name="state"
+                         formControlName="state" 
+                         [ngbTypeahead]="searchState"
+                         (focus)="focusState$.next($event.target.value)" 
+                         (click)="clickState$.next($event.target.value)" 
+                         #instanceSt="ngbTypeahead"
+                         [resultTemplate]="rtState" 
+                         [inputFormatter]="formatter" />
+                         
+ <div *ngIf="(!sampleForm.controls['state'].valid &&
+  sampleForm.controls['state'].dirty)">Value Required</div> 
+</div>
+                         <button type="submit" ></button>
+                        </div>
+
+
+
+                       
+                            <!-- <div class="one-half">
+                            
+                            
+                            
+                             <div class="span10">
+                              <ng-template #rtState let-r="result" let-t="term">{{ r.name}}</ng-template>
+                              <label for="stateCode">State*</label>
+                              <input id="stateCode" 
+                                                     placeholder="Search..." 
+                                                     aria-label="Enter State" 
+                                                     type="text" name="state"
+                                                     formControlName="state" 
+                                                     [ngbTypeahead]="searchState"
+                                                     (focus)="focusState$.next($event.target.value)" 
+                                                     (click)="clickState$.next($event.target.value)" 
+                                                     #instanceSt="ngbTypeahead"
+                                                     [resultTemplate]="rtState" 
+                                                     [inputFormatter]="formatter" />
+                                                     
+                             <div *ngIf="(!sampleForm.controls['state'].valid &&
+                              sampleForm.controls['state'].dirty)">Value Required</div> 
+                            </div>
+                                                     <button type="submit" ></button>
+                                                    </div> -->
+                      </div>
+<div>
+   <input type="text" formControlName="city" name="city"
+   [ngClass]="(!sampleForm.controls['city'].valid && sampleForm.controls['city'].errors.required)? 'field-error': ''">
+  
+   <div *ngIf="!sampleForm.controls['city'].valid && sampleForm.controls['city'].errors.required">
+     <p>Field cannot be empty</p>
+   </div>
+</div>
+                     
+                      <button type="submit">Submit</button>
+</form>
+<router-outlet></router-outlet>

@@ -1,0 +1,70 @@
+
+<button type="button" (click)="addNewAddress()">Add Address</button>
+<form [formGroup]="empForm">
+
+<div>
+  <input type="text">
+  <input type="text">
+</div>
+<div>
+    <input type="number" placeholder="Enter Name">
+  
+  </div>
+  <div>
+      <input type="text">
+    
+    </div>
+
+
+
+<table formArrayName="addressForm" id="address">
+  <tr>
+    <th>Index</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let address of this.empForm.get('addressForm')['controls']; let i=index" [formGroupName]="i">
+    <td>{{i}}</td>
+    <td>
+      <span *ngIf="!edit || (edit && i != editRow )">{{address.controls['streetAdress'].value}}</span>
+      <!-- {{record.controls['allianceNum'].value }} -->
+      <span *ngIf="edit && editRow == i">
+        <input type="text" id="streetAdress" formControlName="streetAdress" name="streetAdress">
+      </span>
+    </td>
+    <td><span *ngIf="!edit || (edit && i != editRow )">
+   
+      {{address.controls['city'].value}}
+    </span>
+    <span *ngIf="edit && editRow == i">
+        <input type="text" id="city" formControlName="city" name="city">
+      </span>
+      </td>
+    <td>
+      <button *ngIf="!edit || (edit && i != editRow )" type="button" (click)="deleteAddress(i)">Delete</button>
+      <button *ngIf="!edit || (edit && i != editRow )" type="button" (click)="editAddress(i)">Edit</button>
+      <button *ngIf="edit && editRow == i" type="button" (click)="save(i)">Save</button> 
+      <button *ngIf="edit && editRow == i" type="button" (click)="cancel(i)">Cancel</button>
+      <!-- <div ngbDropdown #myDrop="ngbDropdown">
+        <button  id="dropdownBasic1" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div> -->
+    </td>
+    <!-- <tr>
+      <td>
+          <div>
+        <input type="text" >
+      </div>
+      </td>
+    
+    </tr> -->
+    
+  </tr>
+</table>
+
+</form>

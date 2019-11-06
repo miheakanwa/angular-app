@@ -1,0 +1,42 @@
+<div class="mainForm">
+  <form [formGroup]="empForm" (submit)="createNewStudent()" (keyup.enter)="createNewStudent()">
+    <label>First Name*</label>
+    <input [ngClass]=" (!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.lengthError)
+                      || (!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.hasNumber)
+                      ||(!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.whiteSpaceValidator)
+                      ? 'error' : ''" type="text" id="firstName" name="firstName" formControlName="firstName">
+    <span *ngIf="!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.lengthError
+                  && !empForm.controls['firstName'].errors.whiteSpaceValidator">
+      Exceeded max Limit
+    </span>
+    <span *ngIf="!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.whiteSpaceValidator">
+      This filed requires value
+    </span>
+    <span *ngIf="!empForm.controls['firstName'].valid && empForm.controls['firstName'].errors.hasNumber && !empForm.controls['firstName'].errors.lengthError">Numbers cannot Accepted</span>
+    <label>last Name</label>
+    <input type="text" id="lastName" name="lastName" formControlName="lastName">
+    <button type="submit">Create Student</button>
+  </form>
+</div>
+<button (click)="goToDetailPage()">Go to detail page</button>
+<!-- <table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let student of students; let i=index" (click)="getStudentInfo(student.name)">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+  </tr>
+</table> -->
+
+<div>
+ 
+     <input type="input" 
+            [(ngModel)]="myName" 
+            name="myName" />
+     <button type="submit" appSubmit
+            (click)="getMyName()" (keyup.enter)="getMyName()">Test Enter</button>
+ 
+ 
+</div>
